@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: indigo-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: indigo-website
+  template:
+    metadata:
+      labels:
+        app: indigo-website
+    spec:
+      containers:
+      - name: indigo-website
+        image: ghcr.io/hexagonicalhq/indigo-website:latest
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: indigo-website
+spec:
+  type: ClusterIP
+  selector:
+    app: indigo-website
+  ports:
+  - port: 80
+    targetPort: 80
