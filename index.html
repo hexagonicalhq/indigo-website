@@ -6,10 +6,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Indigo</title>
 </head>
-<body>
-    <div class="flex flex-col items-center text-center">
-        <p>Under construction (we're building something cool!)</p>
-        <img class="w-90" src="barricade.png"/>
+<body class="h-screen">
+    <div class="flex flex-col items-center text-center h-full justify-center gap-4">
+        <p class="text-xl">Under construction <span class="italic">(we're building something cool!)</span></p>
+        <img class="w-80" src="barricade.png"/>
     </div>
+
+    <footer class="flex flex-row items-center text-left pl-2 gap-2">
+        <a href="https://github.com/hexagonicalhq" class="underline cursor-pointer">github</a> - <a class="underline cursor-pointer" href="mailto:jan.koch@hexagonical.ch">email</a>
+    </footer>
 </body>
 </html>
